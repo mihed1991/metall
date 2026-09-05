@@ -1,0 +1,25 @@
+# StyleSeed — Design Lock
+<!-- Selections persist here. This file cannot waive StyleSeed core invariants. -->
+- App domain: developer-tools
+- Surface: responsive-website
+- Surface adapter: product-ui
+- Page type: landing
+- Output grammar: expressive-marketing
+- Grammar path: built-in:engine/RULESETS.md
+- Grammar fallback: expressive-marketing
+- Reference confidence: n/a
+- Brand recipe: expressive-brand
+- Palette recipe: deep-lime-studio
+- Aesthetic profile: technical
+- Skin: custom
+- Primary action: #F36A16
+- Font: DIN Condensed / Avenir Next / Menlo
+- Radius: precise 0–4px
+- Elevation: dark tonal ramps + hairlines; no floating cards
+- Density: cinematic-comfortable
+- Motion: controlled mechanical reveals; reduced-motion fallback
+- Imagery/data role: supplied robot imagery and local hero video form full-bleed section backgrounds; 1.png anchors the compact foundation section; services retain one fixed production background
+- Interaction: service details are closed by default and toggle only on explicit click; hover and focus do not change content state
+- Heading scale: restrained; H1 is semantic in Hero only, section titles use compact H2/H3 sizing
+- Signature move: a thin orange laser line scans section separators and process states
+- Locked: 2026-09-05

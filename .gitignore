@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+.DS_Store
+.qodo/
+.styleseed/
+ChatGPT Image *.png
+Robot_operating_laser_cutting_*.mp4
