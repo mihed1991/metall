@@ -1,6 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import { useState } from 'react'
 import { assetUrl } from '../config/assets'
+import { pageHref } from '../config/links'
 
 const services = [
   {
@@ -8,6 +9,7 @@ const services = [
     title: 'Лазерная резка листового металла',
     description: 'Раскраиваем сталь толщиной до 20 мм, алюминий, нержавеющую сталь и другие металлы — до 10 мм.',
     details: 'METALTEC / 3 кВт / поле 3005 × 1505 мм / точность ±0,02 мм',
+    href: 'lazernaya-rezka-metalla/',
   },
   {
     number: '02',
@@ -63,6 +65,7 @@ export function Services() {
                 <div className="service-detail" id={`service-detail-${service.number}`}>
                   <p>{service.description}</p>
                   <small>{service.details}</small>
+                  {service.href && <a className="service-page-link" href={pageHref(service.href)}>Подробнее об услуге <span aria-hidden="true">↗</span></a>}
                 </div>
               </div>
               <ArrowUpRight aria-hidden="true" />
@@ -76,7 +79,7 @@ export function Services() {
             alt="Лазерная резка листового металла на производстве"
             loading="lazy"
           />
-          <span className="visual-code">LF / SERVICES</span>
+          <span className="visual-code">ES / SERVICES</span>
         </div>
       </div>
     </section>

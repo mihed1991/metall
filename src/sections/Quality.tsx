@@ -18,7 +18,7 @@ export function Quality() {
       </div>
       <div className="quality-image media-reveal" data-cursor="VIEW">
         <img src={assetUrl('assets/finished-part.png')} alt="Робот держит готовую металлическую деталь после обработки" loading="lazy" />
-        <span className="image-coordinate">LF / FINAL / 03</span>
+        <span className="image-coordinate">ES / FINAL / 03</span>
       </div>
     </section>
   )

@@ -1,13 +1,14 @@
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { company } from '../config/company'
+import { homeHref } from '../config/links'
 
 const links = [
-  ['Услуги', '#services'],
-  ['Производство', '#engineering'],
-  ['Процесс', '#process'],
-  ['Расчёт', '#quote'],
-  ['Контакты', '#contacts'],
+  ['Услуги', 'services'],
+  ['Производство', 'engineering'],
+  ['Процесс', 'process'],
+  ['Расчёт', 'quote'],
+  ['Контакты', 'contacts'],
 ]
 
 export function Navigation() {
@@ -28,15 +29,15 @@ export function Navigation() {
 
   return (
     <header className={`navigation ${scrolled ? 'is-scrolled' : ''}`}>
-      <a className="brand" href="#top" data-cursor="↗" aria-label={`${company.brand} — к началу страницы`}>
+      <a className="brand" href={homeHref('#top')} data-cursor="↗" aria-label={`${company.brand} — на главную страницу`}>
         ЭРА <span>СТАЛЬ</span>
       </a>
 
       <nav className="desktop-nav" aria-label="Основная навигация">
-        {links.map(([label, href]) => <a key={href} href={href} data-cursor="↘">{label}</a>)}
+        {links.map(([label, target]) => <a key={target} href={homeHref(`#${target}`)} data-cursor="↘">{label}</a>)}
       </nav>
 
-      <a className="nav-cta magnetic" href="#quote" data-cursor="GO">
+      <a className="nav-cta magnetic" href={homeHref('#quote')} data-cursor="GO">
         Рассчитать проект <span aria-hidden="true">↗</span>
       </a>
 
@@ -52,8 +53,8 @@ export function Navigation() {
 
       <div className={`mobile-panel ${open ? 'is-open' : ''}`} aria-hidden={!open}>
         <nav aria-label="Мобильная навигация">
-          {links.map(([label, href], index) => (
-            <a key={href} href={href} onClick={() => setOpen(false)} tabIndex={open ? 0 : -1}>
+          {links.map(([label, target], index) => (
+            <a key={target} href={homeHref(`#${target}`)} onClick={() => setOpen(false)} tabIndex={open ? 0 : -1}>
               <small>0{index + 1}</small>{label}<span aria-hidden="true">↗</span>
             </a>
           ))}
