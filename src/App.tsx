@@ -14,7 +14,9 @@ import { Quality } from './sections/Quality'
 import { Quote } from './sections/Quote'
 import { Services } from './sections/Services'
 
-gsap.registerPlugin(ScrollTrigger)
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger)
+}
 
 function App() {
   useLayoutEffect(() => {
