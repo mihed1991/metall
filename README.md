@@ -1,4 +1,4 @@
-# LaserFlux
+# Эра Сталь
 
 Премиальный одностраничный сайт металлообрабатывающей компании на React, TypeScript, Vite и Tailwind CSS.
 

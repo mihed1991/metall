@@ -1,4 +1,4 @@
-name: Deploy LaserFlux to GitHub Pages
+name: Deploy Era Steel to GitHub Pages
 
 on:
   push:

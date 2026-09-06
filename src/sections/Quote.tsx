@@ -1,6 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import { FormEvent, useState } from 'react'
 import { FileUpload } from '../components/FileUpload'
+import { company, priceFactors } from '../config/company'
 
 export function Quote() {
   const [notice, setNotice] = useState('')
@@ -12,7 +13,7 @@ export function Quote() {
       form.reportValidity()
       return
     }
-    setNotice('Данные проверены. Онлайн-отправка будет доступна после подключения обработчика формы.')
+    setNotice(`Данные проверены. До подключения онлайн-отправки пришлите заявку на ${company.email}.`)
   }
 
   return (
@@ -21,14 +22,20 @@ export function Quote() {
         <p className="eyebrow reveal">07 / PROJECT REQUEST</p>
         <h2 id="quote-title" className="reveal">Рассчитать<br />проект</h2>
         <p className="reveal">Прикрепите чертёж или опишите задачу. Мы изучим данные и свяжемся с вами для уточнения деталей.</p>
-        <div className="quote-note reveal"><span>01</span> Один запрос — вся исходная информация для предварительной оценки.</div>
+        <div className="quote-note reveal"><span>01</span> Минимальный заказ — {company.minimumOrder}.</div>
+        <details className="price-details reveal">
+          <summary>Что влияет на стоимость</summary>
+          <ul>
+            {priceFactors.map((factor) => <li key={factor}>{factor}</li>)}
+          </ul>
+        </details>
       </div>
 
       <form className="quote-form reveal" onSubmit={submit} noValidate={false}>
         <div className="field-grid">
           <label><span>Имя *</span><input name="name" autoComplete="name" required placeholder="Как к вам обращаться" /></label>
           <label><span>Телефон *</span><input name="phone" type="tel" autoComplete="tel" required placeholder="+375 ——— ——— ———" /></label>
-          <label><span>Email *</span><input name="email" type="email" autoComplete="email" required placeholder="name@company.by" /></label>
+          <label><span>Email *</span><input name="email" type="email" autoComplete="email" required placeholder="name@example.by" /></label>
           <label>
             <span>Тип работ *</span>
             <select name="service" required defaultValue="">

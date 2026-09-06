@@ -7,11 +7,11 @@ export function Intro() {
       <img className="intro-image" src={introBackground} alt="" aria-hidden="true" />
       <div className="section-index reveal">02 / ОСНОВА</div>
       <div className="intro-copy">
-        <p className="eyebrow reveal">LASERFLUX / PRECISION METAL PROCESSING</p>
+        <p className="eyebrow reveal">ЭРА СТАЛЬ / PRECISION METAL PROCESSING</p>
         <h2 id="intro-title" className="display-title reveal">
           <span>Металл.</span><span>Точность.</span><span>Контроль.</span>
         </h2>
-        <p className="intro-text reveal">Работаем с листовым металлом и превращаем чертежи, эскизы и технические задачи в готовые детали.</p>
+        <p className="intro-text reveal">Производим детали из листового металла в Калинковичах: работаем по чертежам, эскизам и техническим заданиям.</p>
       </div>
       <LaserLine />
     </section>

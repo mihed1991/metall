@@ -1,11 +1,13 @@
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { company } from '../config/company'
 
 const links = [
   ['Услуги', '#services'],
   ['Производство', '#engineering'],
   ['Процесс', '#process'],
   ['Расчёт', '#quote'],
+  ['Контакты', '#contacts'],
 ]
 
 export function Navigation() {
@@ -26,8 +28,8 @@ export function Navigation() {
 
   return (
     <header className={`navigation ${scrolled ? 'is-scrolled' : ''}`}>
-      <a className="brand" href="#top" data-cursor="↗" aria-label="LaserFlux — к началу страницы">
-        LASER<span>FLUX</span>
+      <a className="brand" href="#top" data-cursor="↗" aria-label={`${company.brand} — к началу страницы`}>
+        ЭРА <span>СТАЛЬ</span>
       </a>
 
       <nav className="desktop-nav" aria-label="Основная навигация">
