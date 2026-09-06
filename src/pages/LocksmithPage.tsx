@@ -2,9 +2,11 @@ import { ArrowDownRight, ArrowUpRight } from 'lucide-react'
 import { CustomCursor } from '../components/CustomCursor'
 import { LaserLine } from '../components/LaserLine'
 import { Navigation } from '../components/Navigation'
+import { ResponsivePicture } from '../components/ResponsivePicture'
 import { assetUrl } from '../config/assets'
 import { company } from '../config/company'
 import { homeHref } from '../config/links'
+import { responsiveAssets } from '../config/responsiveAssets'
 import { Footer } from '../sections/Contacts'
 
 const operations = [
@@ -89,8 +91,13 @@ export function LocksmithPage() {
           </div>
         </section>
 
-        <section className="service-order-flow service-order-flow--locksmith" aria-labelledby="locksmith-flow-title">
-          <img src={assetUrl('assets/engineering-review.png')} alt="Проверка чертежа перед слесарной обработкой детали" loading="lazy" />
+        <section className="service-order-flow service-order-flow--locksmith" id="process-details" aria-labelledby="locksmith-flow-title">
+          <ResponsivePicture
+            className="service-order-picture"
+            desktop={responsiveAssets.services.desktop}
+            mobile={responsiveAssets.services.mobile}
+            alt="Подготовка металлической заготовки к слесарной обработке"
+          />
           <div className="service-order-shade" aria-hidden="true" />
           <div className="service-order-copy">
             <p className="eyebrow">02 / ПРОЦЕСС</p>

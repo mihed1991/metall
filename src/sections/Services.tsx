@@ -1,7 +1,8 @@
 import { ArrowUpRight } from 'lucide-react'
 import { useState } from 'react'
-import { assetUrl } from '../config/assets'
+import { ResponsivePicture } from '../components/ResponsivePicture'
 import { pageHref } from '../config/links'
+import { responsiveAssets } from '../config/responsiveAssets'
 
 const services = [
   {
@@ -76,10 +77,11 @@ export function Services() {
         </div>
 
         <div className="service-visual reveal" data-cursor="VIEW">
-          <img
-            src={assetUrl('assets/laser-cutting-wide.png')}
+          <ResponsivePicture
+            className="responsive-media-picture"
+            desktop={responsiveAssets.services.desktop}
+            mobile={responsiveAssets.services.mobile}
             alt="Лазерная резка листового металла на производстве"
-            loading="lazy"
           />
           <span className="visual-code">ES / SERVICES</span>
         </div>

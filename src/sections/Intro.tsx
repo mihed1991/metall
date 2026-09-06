@@ -1,10 +1,18 @@
 import { LaserLine } from '../components/LaserLine'
-import introBackground from '../../1.png'
+import { ResponsivePicture } from '../components/ResponsivePicture'
+import { responsiveAssets } from '../config/responsiveAssets'
 
 export function Intro() {
   return (
-    <section className="intro section" aria-labelledby="intro-title">
-      <img className="intro-image" src={introBackground} alt="" aria-hidden="true" />
+    <section className="intro section" id="foundation" aria-labelledby="intro-title">
+      <ResponsivePicture
+        className="intro-picture"
+        imageClassName="intro-image"
+        desktop={responsiveAssets.foundation.desktop}
+        mobile={responsiveAssets.foundation.mobile}
+        alt=""
+        decorative
+      />
       <div className="section-index reveal">02 / ОСНОВА</div>
       <div className="intro-copy">
         <p className="eyebrow reveal">ЭРА СТАЛЬ / PRECISION METAL PROCESSING</p>

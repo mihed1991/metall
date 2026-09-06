@@ -2,9 +2,11 @@ import { ArrowDownRight, ArrowUpRight } from 'lucide-react'
 import { CustomCursor } from '../components/CustomCursor'
 import { LaserLine } from '../components/LaserLine'
 import { Navigation } from '../components/Navigation'
+import { ResponsivePicture } from '../components/ResponsivePicture'
 import { assetUrl } from '../config/assets'
 import { company, priceFactors } from '../config/company'
 import { homeHref } from '../config/links'
+import { responsiveAssets } from '../config/responsiveAssets'
 import { Footer } from '../sections/Contacts'
 
 const specifications = [
@@ -77,8 +79,13 @@ export function LaserCuttingPage() {
           </div>
         </section>
 
-        <section className="service-order-flow" aria-labelledby="order-flow-title">
-          <img src={assetUrl('assets/laser-cutting-close.png')} alt="Процесс лазерной резки металла крупным планом" loading="lazy" />
+        <section className="service-order-flow" id="process-details" aria-labelledby="order-flow-title">
+          <ResponsivePicture
+            className="service-order-picture"
+            desktop={responsiveAssets.blueprint.desktop}
+            mobile={responsiveAssets.blueprint.mobile}
+            alt="Подготовка чертежа металлической детали к лазерной резке"
+          />
           <div className="service-order-shade" aria-hidden="true" />
           <div className="service-order-copy">
             <p className="eyebrow">02 / ПРОЦЕСС</p>

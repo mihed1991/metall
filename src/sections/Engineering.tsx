@@ -1,5 +1,6 @@
-import { assetUrl } from '../config/assets'
+import { ResponsivePicture } from '../components/ResponsivePicture'
 import { company } from '../config/company'
+import { responsiveAssets } from '../config/responsiveAssets'
 
 const specifications = [
   ['Станок', company.machine],
@@ -13,7 +14,12 @@ export function Engineering() {
   return (
     <section className="engineering" id="engineering" aria-labelledby="engineering-title">
       <div className="engineering-image media-reveal" data-cursor="VIEW">
-        <img src={assetUrl('assets/blueprint-pointing.png')} alt="Робот изучает технический чертёж детали" loading="lazy" />
+        <ResponsivePicture
+          className="responsive-media-picture"
+          desktop={responsiveAssets.engineering.desktop}
+          mobile={responsiveAssets.engineering.mobile}
+          alt="Проектирование металлической детали по техническому заданию"
+        />
         <span className="image-coordinate">DWG / REVIEW / 01</span>
       </div>
       <div className="engineering-copy">

@@ -23,7 +23,7 @@ export function Footer() {
         <a className="footer-cta" href={homeHref('#quote')}>Обсудить проект <span aria-hidden="true">↗</span></a>
       </div>
       <div className="footer-meta">
-        <span>{company.legalName}</span>
+        <span>{company.legalName} / УНП {company.unp}</span>
         <span>Минимальный заказ {company.minimumOrder}</span>
         <span>© {new Date().getFullYear()} {company.brand}</span>
       </div>

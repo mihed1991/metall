@@ -1,5 +1,6 @@
-import { assetUrl } from '../config/assets'
+import { ResponsivePicture } from '../components/ResponsivePicture'
 import { company } from '../config/company'
+import { responsiveAssets } from '../config/responsiveAssets'
 
 export function Quality() {
   return (
@@ -17,7 +18,12 @@ export function Quality() {
         </div>
       </div>
       <div className="quality-image media-reveal" data-cursor="VIEW">
-        <img src={assetUrl('assets/finished-part.png')} alt="Робот держит готовую металлическую деталь после обработки" loading="lazy" />
+        <ResponsivePicture
+          className="responsive-media-picture"
+          desktop={responsiveAssets.quality.desktop}
+          mobile={responsiveAssets.quality.mobile}
+          alt="Готовая металлическая деталь после обработки"
+        />
         <span className="image-coordinate">ES / FINAL / 03</span>
       </div>
     </section>

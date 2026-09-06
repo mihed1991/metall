@@ -2,9 +2,11 @@ import { ArrowDownRight, ArrowUpRight } from 'lucide-react'
 import { CustomCursor } from '../components/CustomCursor'
 import { LaserLine } from '../components/LaserLine'
 import { Navigation } from '../components/Navigation'
+import { ResponsivePicture } from '../components/ResponsivePicture'
 import { assetUrl } from '../config/assets'
 import { company } from '../config/company'
 import { homeHref } from '../config/links'
+import { responsiveAssets } from '../config/responsiveAssets'
 import { Footer } from '../sections/Contacts'
 
 const specifications = [
@@ -90,8 +92,13 @@ export function BendingPage() {
           </div>
         </section>
 
-        <section className="service-order-flow service-order-flow--bending" aria-labelledby="bending-flow-title">
-          <img src={assetUrl('assets/blueprint-pointing.png')} alt="Проверка геометрии детали по техническому чертежу" loading="lazy" />
+        <section className="service-order-flow service-order-flow--bending" id="process-details" aria-labelledby="bending-flow-title">
+          <ResponsivePicture
+            className="service-order-picture"
+            desktop={responsiveAssets.bending.desktop}
+            mobile={responsiveAssets.bending.mobile}
+            alt="Проверка чертежей перед гибкой листового металла"
+          />
           <div className="service-order-shade" aria-hidden="true" />
           <div className="service-order-copy">
             <p className="eyebrow">02 / ПРОЦЕСС</p>
