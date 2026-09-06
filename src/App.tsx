@@ -21,10 +21,25 @@ if (typeof window !== 'undefined') {
 function App() {
   useLayoutEffect(() => {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reducedMotion) return
+    const initialAnchor = window.location.hash
+    if (reducedMotion) {
+      const initialAnchorFrame = requestAnimationFrame(() => {
+        if (initialAnchor) document.querySelector(initialAnchor)?.scrollIntoView({ block: 'start' })
+      })
+      return () => cancelAnimationFrame(initialAnchorFrame)
+    }
 
-    const lenis = new Lenis({ duration: 1.05, smoothWheel: true })
+    const lenis = new Lenis({
+      duration: 1.05,
+      smoothWheel: true,
+      anchors: true,
+      stopInertiaOnNavigate: true,
+    })
     let animationFrame = 0
+    const initialAnchorFrame = requestAnimationFrame(() => {
+      const target = initialAnchor ? document.querySelector<HTMLElement>(initialAnchor) : null
+      if (target) lenis.scrollTo(target, { immediate: true })
+    })
     const update = (time: number) => {
       lenis.raf(time)
       animationFrame = requestAnimationFrame(update)
@@ -90,6 +105,7 @@ function App() {
       context.revert()
       magneticCleanups.forEach((cleanup) => cleanup())
       lenis.destroy()
+      cancelAnimationFrame(initialAnchorFrame)
       cancelAnimationFrame(animationFrame)
     }
   }, [])

@@ -27,6 +27,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: var(--ink); }
+section[id] { scroll-margin-top: 64px; }
 body { margin: 0; min-width: 320px; overflow-x: hidden; background: var(--ink); }
 body.menu-open { overflow: hidden; }
 body.menu-open .navigation { border-color: transparent; background: transparent; backdrop-filter: none; }
@@ -180,7 +181,7 @@ img, video { display: block; max-width: 100%; }
 .intro-picture { position: absolute; inset: 0; display: block; }
 .intro-image { width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center; }
 .intro > *:not(.intro-picture) { position: relative; z-index: 2; }
-.section-index { align-self: start; padding-top: 12px; writing-mode: horizontal-tb; white-space: nowrap; }
+.section-index { align-self: start; padding-top: 0; writing-mode: horizontal-tb; white-space: nowrap; }
 .intro-copy { display: grid; grid-template-columns: minmax(0, 1fr) minmax(250px, .38fr); align-items: end; gap: 5vw; }
 .intro-copy .eyebrow { grid-column: 1 / -1; margin-bottom: 26px; }
 .display-title { display: flex; flex-direction: column; font-size: clamp(52px, 7vw, 96px); }

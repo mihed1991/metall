@@ -2,6 +2,7 @@ import { ArrowDownRight } from 'lucide-react'
 import { LaserLine } from '../components/LaserLine'
 import { assetUrl } from '../config/assets'
 import { company } from '../config/company'
+import { homeHref } from '../config/links'
 
 export function Hero() {
   return (
@@ -27,10 +28,10 @@ export function Hero() {
         <div className="hero-bottom">
           <p>Лазерная резка и обработка листового металла в Калинковичах — от чертежа до готовой детали.</p>
           <div className="hero-actions">
-            <a className="button button-primary magnetic" href="#quote" data-cursor="GO">
+            <a className="button button-primary magnetic" href={homeHref('#quote')} data-cursor="GO">
               Рассчитать проект <ArrowDownRight aria-hidden="true" />
             </a>
-            <a className="text-link" href="#services" data-cursor="↘">Наши возможности</a>
+            <a className="text-link" href={homeHref('#services')} data-cursor="↘">Наши возможности</a>
           </div>
         </div>
       </div>
