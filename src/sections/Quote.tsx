@@ -42,7 +42,7 @@ export function Quote() {
               <option value="" disabled>Выберите направление</option>
               <option>Лазерная резка</option>
               <option>Гибка листового металла</option>
-              <option>Слесарные операции</option>
+              <option>Слесарные работы</option>
               <option>Несколько операций</option>
             </select>
           </label>

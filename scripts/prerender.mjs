@@ -10,6 +10,8 @@ const { render } = await import(pathToFileURL(serverEntryPath).href)
 const pages = [
   { key: 'home', output: 'dist/index.html', pathname: '' },
   { key: 'laser-cutting', output: 'dist/lazernaya-rezka-metalla/index.html', pathname: 'lazernaya-rezka-metalla/' },
+  { key: 'bending', output: 'dist/gibka-listovogo-metalla/index.html', pathname: 'gibka-listovogo-metalla/' },
+  { key: 'locksmith', output: 'dist/slesarnye-raboty/index.html', pathname: 'slesarnye-raboty/' },
 ]
 
 for (const page of pages) {

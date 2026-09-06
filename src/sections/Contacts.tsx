@@ -16,8 +16,8 @@ export function Footer() {
       <div className="footer-links">
         <nav aria-label="Навигация в подвале">
           <a href={pageHref('lazernaya-rezka-metalla/')}>Лазерная резка</a>
-          <a href={homeHref('#services')}>Гибка металла</a>
-          <a href={homeHref('#services')}>Слесарные операции</a>
+          <a href={pageHref('gibka-listovogo-metalla/')}>Гибка металла</a>
+          <a href={pageHref('slesarnye-raboty/')}>Слесарные работы</a>
           <a href={homeHref('#quote')}>Расчёт</a>
         </nav>
         <a className="footer-cta" href={homeHref('#quote')}>Обсудить проект <span aria-hidden="true">↗</span></a>

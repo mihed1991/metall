@@ -340,6 +340,8 @@ input:focus, select:focus, textarea:focus { border-color: var(--laser); box-shad
 .service-landing { background: var(--ink); }
 .service-landing-hero { position: relative; display: flex; min-height: 100svh; overflow: hidden; align-items: flex-end; background: var(--ink); }
 .service-landing-hero-image { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 57% center; }
+.service-landing-hero--bending .service-landing-hero-image { object-position: 42% center; }
+.service-landing-hero--locksmith .service-landing-hero-image { object-position: 54% center; }
 .service-landing-hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,6,7,.94) 0%, rgba(5,6,7,.7) 38%, rgba(5,6,7,.12) 68%, rgba(5,6,7,.2) 100%), linear-gradient(0deg, rgba(5,6,7,.92) 0%, transparent 48%); }
 .service-landing-hero-content { position: relative; z-index: 2; width: min(820px, 67vw); padding: calc(112px + env(safe-area-inset-top)) var(--gutter) 230px; }
 .breadcrumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: clamp(54px, 8vh, 86px); color: rgba(241,238,232,.5); font: 500 10px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
@@ -357,6 +359,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--laser); box-shad
 .service-landing-hero-facts strong { font: 700 clamp(18px, 1.6vw, 27px)/1 var(--display); letter-spacing: -.01em; text-transform: uppercase; }
 .service-landing-hero-facts .fact-unit { color: var(--laser-hot); font: 600 .5em/1 var(--mono); letter-spacing: .03em; }
 .service-landing-hero-facts em { color: var(--muted); font: 500 9px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.service-landing-hero-facts--words strong { font-size: clamp(17px, 1.4vw, 24px); }
 .service-landing-laser { bottom: 32px; }
 
 .service-section-head h2, .service-order-copy h2, .service-closing h2 { margin: 20px 0 0; font: 700 clamp(46px, 5vw, 76px)/.92 var(--display); letter-spacing: -.035em; text-transform: uppercase; }
@@ -518,6 +521,8 @@ input:focus, select:focus, textarea:focus { border-color: var(--laser); box-shad
   .footer-cta { margin-bottom: 42px; }
   .service-landing-hero { min-height: 100svh; }
   .service-landing-hero-image { object-position: 67% center; }
+  .service-landing-hero--bending .service-landing-hero-image { object-position: 42% center; }
+  .service-landing-hero--locksmith .service-landing-hero-image { object-position: 43% center; }
   .service-landing-hero-shade { background: linear-gradient(0deg, rgba(5,6,7,.98) 0%, rgba(5,6,7,.77) 48%, rgba(5,6,7,.2) 78%, rgba(5,6,7,.08) 100%); }
   .service-landing-hero-content { width: 100%; padding: calc(92px + env(safe-area-inset-top)) var(--gutter) 300px; }
   .breadcrumbs { margin-bottom: 34px; }

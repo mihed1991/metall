@@ -15,6 +15,8 @@ export default defineConfig({
       input: {
         main: resolve(projectRoot, 'index.html'),
         laserCutting: resolve(projectRoot, 'lazernaya-rezka-metalla/index.html'),
+        bending: resolve(projectRoot, 'gibka-listovogo-metalla/index.html'),
+        locksmith: resolve(projectRoot, 'slesarnye-raboty/index.html'),
       },
     },
   },
