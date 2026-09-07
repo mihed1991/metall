@@ -4,6 +4,7 @@ export const company = {
   unp: '491044918',
   phone: '+375336192761',
   phoneDisplay: '+375 33 619-27-61',
+  telegram: 'https://t.me/+375336192761',
   email: 'velptv@mail.ru',
   city: 'Калинковичи',
   address: 'г. Калинковичи, ул. Туровская, 34',
