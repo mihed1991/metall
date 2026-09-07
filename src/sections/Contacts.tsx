@@ -1,9 +1,16 @@
-import { ArrowUpRight, Clock3, Mail, MapPin, Phone, X } from 'lucide-react'
+import { ArrowUpRight, Camera, Clock3, Mail, MapPin, MessageCircle, Phone, PhoneCall, Send, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { company } from '../config/company'
 import { homeHref, pageHref } from '../config/links'
 
 const promptSeenKey = 'era-steel-contact-prompt-seen'
+const yandexMapHref = `https://yandex.by/maps/?text=${encodeURIComponent(company.address)}`
+const socialPlaceholders = [
+  ['Telegram', Send],
+  ['Viber', PhoneCall],
+  ['WhatsApp', MessageCircle],
+  ['Instagram', Camera],
+] as const
 
 export function Footer() {
   const [promptOpen, setPromptOpen] = useState(false)
@@ -82,11 +89,17 @@ export function Footer() {
     <>
       <footer className="footer" id="contacts">
         <div className="footer-grid">
-          <section className="footer-contact-block" aria-labelledby="footer-contact-title">
-            <a className="brand footer-brand" href={homeHref('#top')}>ЭРА <span>СТАЛЬ</span></a>
-            <h2 id="footer-contact-title">Точно превращаем<br />чертежи в металл.</h2>
+          <section className="footer-contact-block" aria-label="Контакты Эра Стали">
+            <a className="brand footer-brand" href={homeHref('#top')}>ЭРА <span>СТАЛИ</span></a>
             <a className="footer-phone" href={`tel:${company.phone}`}>{company.phoneDisplay}</a>
             <a className="footer-email" href={`mailto:${company.email}`}>{company.email}</a>
+            <div className="footer-socials" aria-label="Мессенджеры и социальные сети — ссылки будут добавлены позже">
+              {socialPlaceholders.map(([label, Icon]) => (
+                <span className="footer-social" role="img" aria-label={`${label} — ссылка будет добавлена позже`} title={`${label} — подключим позже`} key={label}>
+                  <Icon aria-hidden="true" />
+                </span>
+              ))}
+            </div>
             <button className="footer-question-button" type="button" onClick={openPrompt}>
               Задать вопрос <ArrowUpRight aria-hidden="true" />
             </button>
@@ -112,7 +125,9 @@ export function Footer() {
           <section className="footer-column footer-production" aria-labelledby="footer-production-title">
             <h2 id="footer-production-title">Производство</h2>
             <address>
-              <span><MapPin aria-hidden="true" />{company.address}</span>
+              <a className="footer-address-link" href={yandexMapHref} target="_blank" rel="noreferrer" data-cursor="MAP" aria-label={`${company.address} — открыть в Яндекс Картах`}>
+                <MapPin aria-hidden="true" />{company.address}
+              </a>
               <span><Clock3 aria-hidden="true" />{company.workingHours}</span>
             </address>
             <dl>
@@ -134,17 +149,17 @@ export function Footer() {
         <div className="contact-prompt" role="presentation">
           <button className="contact-prompt-backdrop" type="button" aria-label="Закрыть окно" onClick={closePrompt} />
           <section ref={dialogRef} className="contact-prompt-panel" role="dialog" aria-modal="true" aria-labelledby="contact-prompt-title" aria-describedby="contact-prompt-description">
-            <button ref={closeButtonRef} className="contact-prompt-close" type="button" aria-label="Закрыть" onClick={closePrompt}>
+            <button ref={closeButtonRef} className="contact-prompt-close" type="button" aria-label="Закрыть" onClick={closePrompt} data-cursor="CLOSE">
               <X aria-hidden="true" />
             </button>
             <p className="eyebrow">09 / ПРЯМАЯ СВЯЗЬ</p>
             <h2 id="contact-prompt-title">Остались<br />вопросы?</h2>
             <p className="contact-prompt-lead" id="contact-prompt-description">Подскажем по срокам, стоимости и техническим возможностям производства.</p>
             <div className="contact-prompt-status"><span aria-hidden="true" />На связи {company.workingHours}</div>
-            <a className="contact-prompt-phone" href={`tel:${company.phone}`} onClick={closePrompt}>{company.phoneDisplay}</a>
+            <a className="contact-prompt-phone" href={`tel:${company.phone}`} onClick={closePrompt} data-cursor="CALL">{company.phoneDisplay}</a>
             <div className="contact-prompt-actions">
-              <a className="button button-primary" href={`tel:${company.phone}`} onClick={closePrompt}>Позвонить <Phone aria-hidden="true" /></a>
-              <a className="button contact-prompt-email" href={`mailto:${company.email}`} onClick={closePrompt}>Написать <Mail aria-hidden="true" /></a>
+              <a className="button button-primary" href={`tel:${company.phone}`} onClick={closePrompt} data-cursor="CALL">Позвонить <Phone aria-hidden="true" /></a>
+              <a className="button contact-prompt-email" href={`mailto:${company.email}`} onClick={closePrompt} data-cursor="MAIL">Написать <Mail aria-hidden="true" /></a>
             </div>
             <p className="contact-prompt-note">Минимальный заказ — {company.minimumOrder}</p>
           </section>

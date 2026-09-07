@@ -1,5 +1,5 @@
 export const company = {
-  brand: 'Эра Сталь',
+  brand: 'Эра Стали',
   legalName: 'ИП Коновод',
   unp: '491044918',
   phone: '+375336192761',

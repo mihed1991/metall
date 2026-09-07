@@ -15,7 +15,7 @@ export function Intro() {
       />
       <div className="section-index reveal">02 / ОСНОВА</div>
       <div className="intro-copy">
-        <p className="eyebrow reveal">ЭРА СТАЛЬ / PRECISION METAL PROCESSING</p>
+        <p className="eyebrow reveal">ЭРА СТАЛИ / PRECISION METAL PROCESSING</p>
         <h2 id="intro-title" className="display-title reveal">
           <span>Металл.</span><span>Точность.</span><span>Контроль.</span>
         </h2>

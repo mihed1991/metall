@@ -23,7 +23,7 @@ export function Hero() {
       <div className="hero-grid" aria-hidden="true" />
 
       <div className="hero-content">
-        <p className="eyebrow">ЭРА СТАЛЬ / METAL TECHNOLOGY</p>
+        <p className="eyebrow">ЭРА СТАЛИ / METAL TECHNOLOGY</p>
         <h1><span>Лазерная</span><span>резка</span><span>металла</span></h1>
         <div className="hero-bottom">
           <p>Лазерная резка и обработка листового металла в Калинковичах — от чертежа до готовой детали.</p>

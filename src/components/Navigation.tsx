@@ -30,7 +30,7 @@ export function Navigation() {
   return (
     <header className={`navigation ${scrolled ? 'is-scrolled' : ''}`}>
       <a className="brand" href={homeHref('#top')} data-cursor="↗" aria-label={`${company.brand} — на главную страницу`}>
-        ЭРА <span>СТАЛЬ</span>
+        ЭРА <span>СТАЛИ</span>
       </a>
 
       <nav className="desktop-nav" aria-label="Основная навигация">
