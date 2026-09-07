@@ -24,9 +24,9 @@ export function Hero() {
 
       <div className="hero-content">
         <p className="eyebrow">ЭРА СТАЛИ / METAL TECHNOLOGY</p>
-        <h1><span>Лазерная</span><span>резка</span><span>металла</span></h1>
+        <h1><span>Лазерная</span><span>резка и гибка</span><span>металла</span></h1>
         <div className="hero-bottom">
-          <p>Лазерная резка и обработка листового металла в Калинковичах — от чертежа до готовой детали.</p>
+          <p>Резка с точностью ±0,02 мм: сталь до 20 мм, алюминий, нержавеющая сталь и другие металлы — до 10 мм. Гибка с усилием 100 тонн.</p>
           <div className="hero-actions">
             <a className="button button-primary magnetic" href={homeHref('#quote')} data-cursor="GO">
               Рассчитать проект <ArrowDownRight aria-hidden="true" />
