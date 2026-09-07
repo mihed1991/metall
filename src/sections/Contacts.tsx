@@ -6,10 +6,10 @@ import { homeHref, pageHref } from '../config/links'
 const promptSeenKey = 'era-steel-contact-prompt-seen'
 const yandexMapHref = `https://yandex.by/maps/?text=${encodeURIComponent(company.address)}`
 const socialPlaceholders = [
-  ['Telegram', `${import.meta.env.BASE_URL}images/telegram_vector.svg`],
-  ['Viber', `${import.meta.env.BASE_URL}images/viber_vector.svg`],
-  ['WhatsApp', `${import.meta.env.BASE_URL}images/whatsapp_vector.svg`],
-  ['Instagram', `${import.meta.env.BASE_URL}images/instagram_vector.svg`],
+  ['Telegram', `${import.meta.env.BASE_URL}images/social-telegram.png`],
+  ['Viber', `${import.meta.env.BASE_URL}images/social-viber.png`],
+  ['WhatsApp', `${import.meta.env.BASE_URL}images/social-whatsapp.png`],
+  ['Instagram', `${import.meta.env.BASE_URL}images/social-instagram.png`],
 ] as const
 
 export function Footer() {
