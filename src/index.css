@@ -336,8 +336,8 @@ input:focus, select:focus, textarea:focus { border-color: var(--laser); box-shad
 .footer-email { display: block; width: fit-content; margin-top: 8px; color: var(--muted); font: 500 12px/1.4 var(--mono); }
 .footer-phone:hover, .footer-email:hover { color: var(--laser-hot); }
 .footer-socials { display: flex; gap: 7px; margin-top: 10px; }
-.footer-social { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid var(--line); border-radius: 2px; color: var(--steel); background: rgba(255,255,255,.018); }
-.footer-social svg { width: 15px; height: 15px; }
+.footer-social { display: grid; width: 34px; height: 34px; place-items: center; }
+.footer-social img { width: 100%; height: 100%; object-fit: contain; }
 .footer-question-button { display: flex; width: min(100%, 270px); min-height: 42px; align-items: center; justify-content: space-between; margin-top: 10px; padding: 0 15px; border: 1px solid var(--line); border-radius: 2px; color: var(--paper); background: rgba(255,255,255,.02); font: 600 10px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; transition: border-color 180ms ease, background-color 180ms ease; }
 .footer-question-button:hover { border-color: var(--laser); background: rgba(243,106,22,.08); }
 .footer-question-button svg { width: 17px; color: var(--laser-hot); }

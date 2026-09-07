@@ -1,4 +1,4 @@
-import { ArrowUpRight, Camera, Clock3, Mail, MapPin, MessageCircle, Phone, PhoneCall, Send, X } from 'lucide-react'
+import { ArrowUpRight, Clock3, Mail, MapPin, Phone, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { company } from '../config/company'
 import { homeHref, pageHref } from '../config/links'
@@ -6,10 +6,10 @@ import { homeHref, pageHref } from '../config/links'
 const promptSeenKey = 'era-steel-contact-prompt-seen'
 const yandexMapHref = `https://yandex.by/maps/?text=${encodeURIComponent(company.address)}`
 const socialPlaceholders = [
-  ['Telegram', Send],
-  ['Viber', PhoneCall],
-  ['WhatsApp', MessageCircle],
-  ['Instagram', Camera],
+  ['Telegram', `${import.meta.env.BASE_URL}images/telegram_vector.svg`],
+  ['Viber', `${import.meta.env.BASE_URL}images/viber_vector.svg`],
+  ['WhatsApp', `${import.meta.env.BASE_URL}images/whatsapp_vector.svg`],
+  ['Instagram', `${import.meta.env.BASE_URL}images/instagram_vector.svg`],
 ] as const
 
 export function Footer() {
@@ -94,9 +94,9 @@ export function Footer() {
             <a className="footer-phone" href={`tel:${company.phone}`}>{company.phoneDisplay}</a>
             <a className="footer-email" href={`mailto:${company.email}`}>{company.email}</a>
             <div className="footer-socials" aria-label="Мессенджеры и социальные сети — ссылки будут добавлены позже">
-              {socialPlaceholders.map(([label, Icon]) => (
+              {socialPlaceholders.map(([label, iconSrc]) => (
                 <span className="footer-social" role="img" aria-label={`${label} — ссылка будет добавлена позже`} title={`${label} — подключим позже`} key={label}>
-                  <Icon aria-hidden="true" />
+                  <img src={iconSrc} alt="" aria-hidden="true" />
                 </span>
               ))}
             </div>
