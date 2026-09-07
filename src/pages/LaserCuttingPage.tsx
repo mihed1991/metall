@@ -41,7 +41,7 @@ export function LaserCuttingPage() {
       <Navigation />
       <main>
         <section className="service-landing-hero" aria-labelledby="laser-cutting-title">
-          <img className="service-landing-hero-image" src={assetUrl('assets/laser-cutting-wide.png')} alt="Лазерная резка листового металла на производстве" />
+          <img className="service-landing-hero-image" src={assetUrl('images/laser-cutting-wide.png')} alt="Лазерная резка листового металла на производстве" />
           <div className="service-landing-hero-shade" aria-hidden="true" />
           <div className="service-landing-hero-content">
             <nav className="breadcrumbs" aria-label="Хлебные крошки">

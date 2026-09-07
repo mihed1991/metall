@@ -9,6 +9,7 @@ const projectRoot = fileURLToPath(new URL('.', import.meta.url))
 
 export default defineConfig({
   base: siteConfig.basePath,
+  publicDir: 'media',
   plugins: [react(), tailwindcss()],
   build: {
     rollupOptions: {

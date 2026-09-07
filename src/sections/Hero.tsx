@@ -14,10 +14,10 @@ export function Hero() {
         loop
         playsInline
         preload="metadata"
-        poster={assetUrl('assets/laser-cutting-wide.png')}
+        poster={assetUrl('images/laser-cutting-wide.png')}
         aria-label="Промышленный робот выполняет лазерную обработку металла"
       >
-        <source src={assetUrl('assets/laserflux-hero.mp4')} type="video/mp4" />
+        <source src={assetUrl('videos/laserflux-hero.mp4')} type="video/mp4" />
       </video>
       <div className="hero-shade" aria-hidden="true" />
       <div className="hero-grid" aria-hidden="true" />

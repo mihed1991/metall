@@ -9,3 +9,5 @@ vite.config.d.ts
 .styleseed/
 ChatGPT Image *.png
 Robot_operating_laser_cutting_*.mp4
+/media/images/dekstop*.png
+/media/images/mob*.png

@@ -53,7 +53,7 @@ export function LocksmithPage() {
       <Navigation />
       <main>
         <section className="service-landing-hero service-landing-hero--locksmith" aria-labelledby="locksmith-title">
-          <img className="service-landing-hero-image" src={assetUrl('assets/finished-part.png')} alt="Контроль металлической детали после слесарной обработки" />
+          <img className="service-landing-hero-image" src={assetUrl('images/finished-part.png')} alt="Контроль металлической детали после слесарной обработки" />
           <div className="service-landing-hero-shade" aria-hidden="true" />
           <div className="service-landing-hero-content">
             <nav className="breadcrumbs" aria-label="Хлебные крошки">

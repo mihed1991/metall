@@ -18,7 +18,7 @@
 - Elevation: dark tonal ramps + hairlines; no floating cards
 - Density: cinematic-comfortable
 - Motion: controlled mechanical reveals; reduced-motion fallback
-- Imagery/data role: supplied robot imagery and local hero video form full-bleed section backgrounds; 1.png anchors the compact foundation section; services retain one fixed production background
+- Imagery/data role: supplied robot imagery from `media/images` and the local hero video from `media/videos` form full-bleed section backgrounds; services retain one fixed production background
 - Interaction: service details are closed by default and toggle only on explicit click; hover and focus do not change content state
 - Heading scale: restrained; H1 is semantic in Hero only, section titles use compact H2/H3 sizing
 - Signature move: a thin orange laser line scans section separators and process states

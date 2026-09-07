@@ -54,7 +54,7 @@ export function BendingPage() {
       <Navigation />
       <main>
         <section className="service-landing-hero service-landing-hero--bending" aria-labelledby="bending-title">
-          <img className="service-landing-hero-image" src={assetUrl('assets/engineering-review.png')} alt="Подготовка чертежа детали перед гибкой листового металла" />
+          <img className="service-landing-hero-image" src={assetUrl('images/engineering-review.png')} alt="Подготовка чертежа детали перед гибкой листового металла" />
           <div className="service-landing-hero-shade" aria-hidden="true" />
           <div className="service-landing-hero-content">
             <nav className="breadcrumbs" aria-label="Хлебные крошки">
