@@ -202,7 +202,7 @@ img, video { display: block; max-width: 100%; }
 .service-row.is-active::before { width: 100%; }
 .service-number { padding-top: 9px; color: var(--laser-hot); font: 500 11px/1 var(--mono); }
 .service-row h3 { margin: 0; }
-.service-row h3 button { min-height: 44px; padding: 0; border: 0; color: var(--paper); background: transparent; text-align: left; font: 700 clamp(26px, 2.6vw, 44px)/.98 var(--display); letter-spacing: -.02em; text-transform: uppercase; cursor: pointer; transition: transform 250ms ease; }
+.service-row h3 button { min-height: 44px; padding: 0; border: 0; color: var(--paper); background: transparent; text-align: left; font: 700 clamp(26px, 2.6vw, 44px)/.98 var(--display); letter-spacing: -.02em; text-transform: uppercase; cursor: pointer; transition: color 200ms ease, transform 250ms ease; }
 .service-row.is-active h3 button { transform: translateX(10px); }
 .service-row > svg { width: 22px; margin-top: 8px; color: var(--steel); transition: color 200ms ease, transform 200ms ease; }
 .service-row.is-active > svg { color: var(--laser-hot); transform: translate(3px,-3px); }
@@ -212,8 +212,8 @@ img, video { display: block; max-width: 100%; }
 .service-detail small { color: rgba(241,238,232,.42); font: 500 9px/1.4 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
 .service-detail { pointer-events: none; }
 .service-row.is-active .service-detail { pointer-events: auto; }
-.service-page-link { display: flex; width: max-content; min-height: 44px; align-items: center; gap: 10px; margin-top: 12px; color: var(--paper); font: 600 10px/1.2 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
-.service-page-link span { color: var(--laser); }
+.service-page-link { display: flex; width: max-content; min-height: 44px; align-items: center; gap: 10px; margin-top: 12px; color: var(--paper); font: 600 10px/1.2 var(--mono); letter-spacing: .08em; text-transform: uppercase; transition: color 180ms ease; }
+.service-page-link span { color: var(--laser); transition: color 180ms ease, transform 180ms ease; }
 .service-visual { position: absolute; z-index: 0; inset: 0; overflow: hidden; background: var(--graphite); }
 .service-visual::after { position: absolute; inset: 0; border: 1px solid rgba(255,255,255,.06); content: ""; pointer-events: none; }
 .responsive-media-picture { position: absolute; inset: 0; display: block; }
@@ -332,7 +332,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--laser); box-shad
 .footer-grid { display: grid; grid-template-columns: minmax(270px, 1.15fr) minmax(140px, .58fr) minmax(170px, .68fr) minmax(260px, 1fr); border-bottom: 1px solid var(--line); }
 .footer-contact-block { padding: 16px clamp(22px, 3vw, 42px) 18px 0; }
 .footer-brand { display: inline-block; margin-bottom: 14px; font-size: clamp(23px, 1.8vw, 28px); }
-.footer-phone { display: block; width: fit-content; color: var(--paper); font: 700 clamp(23px, 2vw, 30px)/1 var(--display); letter-spacing: .015em; }
+.footer-phone { display: block; width: fit-content; color: var(--paper); font: 700 clamp(23px, 2vw, 30px)/1 var(--display); letter-spacing: .015em; transition: color 180ms ease; }
 .footer-email { display: block; width: fit-content; margin-top: 8px; color: var(--muted); font: 500 12px/1.4 var(--mono); }
 .footer-phone:hover, .footer-email:hover { color: var(--laser-hot); }
 .footer-socials { display: flex; gap: 7px; margin-top: 10px; }
@@ -419,7 +419,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--laser); box-shad
 .service-faq { display: grid; grid-template-columns: .75fr 1.25fr; gap: clamp(54px, 8vw, 132px); background: var(--ink-raised); }
 .service-faq-list { border-top: 1px solid var(--line); }
 .service-faq-list details { border-bottom: 1px solid var(--line); }
-.service-faq-list summary { display: flex; min-height: 88px; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 0; color: var(--paper); cursor: pointer; list-style: none; }
+.service-faq-list summary { display: flex; min-height: 88px; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 0; color: var(--paper); cursor: pointer; list-style: none; transition: color 180ms ease; }
 .service-faq-list summary::-webkit-details-marker { display: none; }
 .service-faq-list summary > span { display: grid; grid-template-columns: 42px 1fr; align-items: center; font-size: 17px; line-height: 1.4; }
 .service-faq-list summary small { color: var(--laser); font: 500 9px/1 var(--mono); }
@@ -432,7 +432,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--laser); box-shad
 .service-closing > p:not(.eyebrow) { max-width: 690px; margin: 30px 0 0; color: var(--muted); font-size: 18px; line-height: 1.6; }
 .service-closing-actions { display: flex; align-items: center; gap: 34px; margin-top: 44px; }
 .service-closing-actions .button { min-width: 270px; }
-.service-phone { display: inline-flex; min-height: 44px; align-items: center; border-bottom: 1px solid var(--line); color: var(--paper); font: 600 13px/1 var(--mono); letter-spacing: .04em; }
+.service-phone { display: inline-flex; min-height: 44px; align-items: center; border-bottom: 1px solid var(--line); color: var(--paper); font: 600 13px/1 var(--mono); letter-spacing: .04em; transition: border-color 180ms ease, color 180ms ease; }
 
 /* Cursor */
 .cursor-target, .cursor-follower { display: none; position: fixed; z-index: 200; top: 0; left: 0; pointer-events: none; will-change: transform; }
@@ -447,6 +447,13 @@ input:focus, select:focus, textarea:focus { border-color: var(--laser); box-shad
   .cursor-follower span { position: absolute; top: 40px; left: 50%; color: var(--laser-hot); font: 600 8px/1 var(--mono); letter-spacing: .08em; transform: translateX(-50%); white-space: nowrap; }
   .cursor-follower.is-active { width: 48px; height: 48px; margin: -24px; border-color: var(--laser-hot); }
   .cursor-hidden .cursor-target, .cursor-hidden .cursor-follower { opacity: 0; }
+  .service-row:not(.is-active) h3 button:hover { color: var(--laser-hot); transform: translateX(6px); }
+  .service-row:not(.is-active):hover > svg { color: var(--laser); transform: translate(2px, -2px); }
+  .service-page-link:hover { color: var(--laser-hot); }
+  .service-page-link:hover span { color: var(--laser-hot); transform: translate(3px, -3px); }
+  .service-faq-list details:not([open]) summary:hover { color: var(--laser-hot); }
+  .service-faq-list details:not([open]) summary:hover b { color: var(--laser-hot); transform: translateX(-3px); }
+  .service-phone:hover { border-color: var(--laser-hot); color: var(--laser-hot); }
 }
 
 @media (max-width: 1100px) {
