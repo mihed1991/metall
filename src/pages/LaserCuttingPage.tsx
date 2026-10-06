@@ -39,7 +39,7 @@ export function LaserCuttingPage() {
   return (
     <div className="site service-landing" data-styleseed-recipe="expressive-brand">
       <CustomCursor />
-      <Navigation />
+      <Navigation pricingHref="#prices" />
       <main>
         <section className="service-landing-hero" aria-labelledby="laser-cutting-title">
           <img className="service-landing-hero-image" src={assetUrl('images/laser-cutting-wide.png')} alt="Лазерная резка листового металла на производстве" />

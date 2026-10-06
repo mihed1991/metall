@@ -7,13 +7,15 @@ const links = [
   ['Услуги', 'services'],
   ['Производство', 'engineering'],
   ['Процесс', 'process'],
+  ['Стоимость', 'prices'],
   ['Расчёт', 'quote'],
   ['Контакты', 'contacts'],
 ]
 
-export function Navigation() {
+export function Navigation({ pricingHref = homeHref('#prices') }: { pricingHref?: string }) {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const linkHref = (target: string) => target === 'prices' ? pricingHref : homeHref(`#${target}`)
 
   useEffect(() => {
     const update = () => setScrolled(window.scrollY > 48)
@@ -34,7 +36,7 @@ export function Navigation() {
       </a>
 
       <nav className="desktop-nav" aria-label="Основная навигация">
-        {links.map(([label, target]) => <a key={target} href={homeHref(`#${target}`)} data-cursor="↘">{label}</a>)}
+        {links.map(([label, target]) => <a key={target} href={linkHref(target)} data-cursor="↘">{label}</a>)}
       </nav>
 
       <a className="nav-cta magnetic" href={homeHref('#quote')} data-cursor="GO">
@@ -54,7 +56,7 @@ export function Navigation() {
       <div className={`mobile-panel ${open ? 'is-open' : ''}`} aria-hidden={!open}>
         <nav aria-label="Мобильная навигация">
           {links.map(([label, target], index) => (
-            <a key={target} href={homeHref(`#${target}`)} onClick={() => setOpen(false)} tabIndex={open ? 0 : -1}>
+            <a key={target} href={linkHref(target)} onClick={() => setOpen(false)} tabIndex={open ? 0 : -1}>
               <small>0{index + 1}</small>{label}<span aria-hidden="true">↗</span>
             </a>
           ))}

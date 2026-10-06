@@ -163,7 +163,7 @@
   .pricing-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .pricing-intro { display: contents; }
   .pricing-visual { grid-row: 1; aspect-ratio: 16 / 9; }
-  .pricing-visual img { object-position: center 62%; }
+  .pricing-visual img { object-position: center 40%; }
   .pricing-rates { grid-row: 2; }
   .pricing-intro-copy { grid-row: 3; padding-top: 0; }
   .pricing-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 24px; }
