@@ -5,7 +5,7 @@ export const company = {
   phone: '+375336192761',
   phoneDisplay: '+375 33 619-27-61',
   telegram: 'https://t.me/+375336192761',
-  email: 'velptv@mail.ru',
+  email: 'erastali001@gmail.com',
   city: 'Калинковичи',
   address: 'г. Калинковичи, ул. Туровская, 34',
   workingHours: 'Пн–Пт, 08:00–17:00',

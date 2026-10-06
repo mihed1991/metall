@@ -10,6 +10,7 @@ import { FAQ } from './sections/FAQ'
 import { Hero } from './sections/Hero'
 import { Intro } from './sections/Intro'
 import { Process } from './sections/Process'
+import { Pricing } from './sections/Pricing'
 import { Quality } from './sections/Quality'
 import { Quote } from './sections/Quote'
 import { Services } from './sections/Services'
@@ -121,6 +122,7 @@ function App() {
         <Engineering />
         <Process />
         <Quality />
+        <Pricing />
         <Quote />
         <FAQ />
       </main>

@@ -4,10 +4,11 @@ import { LaserLine } from '../components/LaserLine'
 import { Navigation } from '../components/Navigation'
 import { ResponsivePicture } from '../components/ResponsivePicture'
 import { assetUrl } from '../config/assets'
-import { company, priceFactors } from '../config/company'
+import { company } from '../config/company'
 import { homeHref } from '../config/links'
 import { responsiveAssets } from '../config/responsiveAssets'
 import { Footer } from '../sections/Contacts'
+import { Pricing } from '../sections/Pricing'
 
 const specifications = [
   ['Оборудование', company.machine],
@@ -98,18 +99,7 @@ export function LaserCuttingPage() {
           </div>
         </section>
 
-        <section className="service-price section" aria-labelledby="price-title">
-          <div className="service-section-head">
-            <p className="eyebrow">03 / СТОИМОСТЬ</p>
-            <h2 id="price-title">Из чего складывается цена</h2>
-          </div>
-          <div className="service-price-content">
-            <p>Минимальный заказ — <strong>{company.minimumOrder}</strong>. Итоговую стоимость рассчитываем после проверки файла и исходных требований.</p>
-            <ul>
-              {priceFactors.map((factor, index) => <li key={factor}><small>{String(index + 1).padStart(2, '0')}</small><span>{factor}</span></li>)}
-            </ul>
-          </div>
-        </section>
+        <Pricing eyebrow="03 / СТОИМОСТЬ" />
 
         <section className="service-faq section" aria-labelledby="service-faq-title">
           <div className="service-section-head">

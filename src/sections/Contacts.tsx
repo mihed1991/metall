@@ -45,6 +45,7 @@ export function Footer() {
           <a href={homeHref('#services')}>Возможности</a>
           <a href={homeHref('#engineering')}>Производство</a>
           <a href={homeHref('#process')}>Процесс</a>
+          <a href={homeHref('#prices')}>Прайс</a>
           <a href={homeHref('#quote')}>Расчёт проекта</a>
           <a href={homeHref('#faq')}>Вопросы и ответы</a>
         </nav>
